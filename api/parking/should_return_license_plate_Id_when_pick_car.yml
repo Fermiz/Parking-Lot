@@ -1,0 +1,18 @@
+request:
+  method: POST
+  url: /parking-boy/pick
+  body:
+    ticketId: "69d69778-300b-4e07-9813-b18f81b25a4a"
+  headers:
+    Content-Type: application/json
+  matchers:
+    body:
+    - path: $.ticketId
+      type: by_regex
+      value: "[\\w|-]*"
+response:
+  status: 200
+  body:
+    licensePlateId: "川 99898"
+  headers:
+    Content-Type: application/json;charset=UTF-8
